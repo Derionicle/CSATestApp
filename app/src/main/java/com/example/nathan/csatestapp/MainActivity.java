@@ -1,9 +1,11 @@
 package com.example.nathan.csatestapp;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,7 +14,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TextView textOut = (TextView)findViewById(R.id.textView);
+        School[] schools = {new School("California Institute of Technology",	5),
+                new School("Carnegie Mellon University",	4),
+                new School("Georgia Institute of Technology",	6),
+                new School("Massachusetts Institute of Technology",	1),
+                new School("Purdue University—West Lafayette",6),
+                new School("University of California—Berkeley",3),
+                new School("University of Illinois—Urbana-Champaign",	6),
+                new School("University of Michigan—Ann Arbor",	6),
+                new School("University of Southern California",	10),
+                new School("Stanford University",2)};
+        int toprank=-1;
+        for (School s: schools) {
+            textOut.append(s + "\n");
+            if (s.rank>toprank||toprank==-1) {
+                toprank=s.rank;
+            }
+        }
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
