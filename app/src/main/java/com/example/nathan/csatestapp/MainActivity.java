@@ -24,13 +24,24 @@ public class MainActivity extends AppCompatActivity {
                 new School("University of Michigan—Ann Arbor",	6),
                 new School("University of Southern California",	10),
                 new School("Stanford University",2)};
-        int toprank=-1;
+        int toprank=0;
+        String topschool = "";
+        int ties = 0;
         for (School s: schools) {
-            textOut.append(s + "\n");
-            if (s.rank>toprank||toprank==-1) {
-                toprank=s.rank;
+            textOut.append(s.name + "\n");
+            //finds the top rank
+            if (s.rank < toprank || toprank == 0) {
+                toprank = s.rank;
+                topschool = s.name;
+            }
+            for (School s2 : schools) {
+                if (s.rank == s2.rank) {
+                    ties++;
+                }
             }
         }
+        ties = ties/2;
+        textOut.append(Integer.toString(toprank));
     }
 
 
