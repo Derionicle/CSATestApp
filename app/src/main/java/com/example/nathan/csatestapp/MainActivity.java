@@ -8,8 +8,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
-
 
 
 public class MainActivity extends AppCompatActivity {
@@ -18,21 +16,23 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button mButton1 = (Button)findViewById(R.id.button);
-        Button mButton2 = (Button) findViewById(R.id.button);
+        Button eButton1 = (Button)findViewById(R.id.ebutton);
+        Button fButton2 = (Button) findViewById(R.id.ebutton);
         final MediaPlayer mpE = MediaPlayer.create(this, raw.scalee);
         final MediaPlayer mpF = MediaPlayer.create(this, raw.scalef);
-        mButton1.setOnClickListener(new View.OnClickListener() {
+        eButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.e("Main Activity", "Button 1 clicked");
+                mpE.seekTo(0);
+                Log.e("Main Activity", "E Button clicked");
                 mpE.start();
             }
         });
-        mButton2.setOnClickListener(new View.OnClickListener() {
+        fButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.e("Main Activity", "Button 1 clicked");
+                mpF.seekTo(0);
+                Log.e("Main Activity", "F Button clicked");
                 mpF.start();
             }
         });
