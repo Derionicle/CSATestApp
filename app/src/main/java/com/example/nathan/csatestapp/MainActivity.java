@@ -13,35 +13,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        TextView textOut = (TextView)findViewById(R.id.textView);
-        School[] schools = {new School("California Institute of Technology",	5),
-                new School("Carnegie Mellon University",	4),
-                new School("Georgia Institute of Technology",	6),
-                new School("Massachusetts Institute of Technology",	1),
-                new School("Purdue University—West Lafayette",6),
-                new School("University of California—Berkeley",3),
-                new School("University of Illinois—Urbana-Champaign",	6),
-                new School("University of Michigan—Ann Arbor",	6),
-                new School("University of Southern California",	10),
-                new School("Stanford University",2)};
-        int toprank=0;
-        String topschool = "";
-        int ties = 0;
-        for (School s: schools) {
-            textOut.append(s.name + "\n");
-            //finds the top rank
-            if (s.rank < toprank || toprank == 0) {
-                toprank = s.rank;
-                topschool = s.name;
-            }
-            for (School s2 : schools) {
-                if (s.rank == s2.rank) {
-                    ties++;
-                }
-            }
-        }
-        ties = ties/2;
-        textOut.append(Integer.toString(toprank));
+        
     }
 
 
