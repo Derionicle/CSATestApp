@@ -14,17 +14,129 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
+        android:text="E Scale"
         android:id="@+id/ebutton"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/button6"
+        android:layout_alignEnd="@+id/button5" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="F Scale"
+        android:id="@+id/fbutton"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/button7" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A Scale"
+        android:id="@+id/button"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B Scale"
+        android:id="@+id/button2"
+        android:layout_below="@+id/button3"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B Flat Scale"
+        android:id="@+id/button3"
+        android:layout_below="@+id/button"
         android:layout_toEndOf="@+id/textView" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/fbutton"
-        android:layout_below="@+id/ebutton"
+        android:text="C# Scale"
+        android:id="@+id/button4"
+        android:layout_alignTop="@+id/button10"
         android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="D Scale"
+        android:id="@+id/button5"
+        android:layout_below="@+id/button4"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="D# Scale"
+        android:id="@+id/button6"
+        android:layout_below="@+id/button5"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="F# Scale"
+        android:id="@+id/button7"
+        android:layout_below="@+id/fbutton"
+        android:layout_alignStart="@+id/button9" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="G Scale"
+        android:id="@+id/button8"
+        android:layout_below="@+id/button7"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="G# Scale"
+        android:id="@+id/button9"
+        android:layout_below="@+id/button8"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="High E Scale"
+        android:id="@+id/button10"
+        android:layout_below="@+id/button9"
+        android:layout_alignEnd="@+id/button9" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="High F Scale"
+        android:id="@+id/button11"
+        android:layout_below="@+id/button10"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="High F# Scale"
+        android:id="@+id/button12"
+        android:layout_below="@+id/button11"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="High G Scale"
+        android:id="@+id/button13"
+        android:layout_below="@+id/button12"
+        android:layout_alignEnd="@+id/button12" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="C Scale"
+        android:id="@+id/button14"
+        android:layout_below="@+id/button2"
+        android:layout_toEndOf="@+id/textView" />
 
 </RelativeLayout>
