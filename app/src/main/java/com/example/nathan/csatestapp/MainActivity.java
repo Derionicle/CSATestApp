@@ -176,9 +176,44 @@ public class MainActivity extends AppCompatActivity {
                 Highg.start();
             }
         });
+
+        Button button15 = (Button) findViewById(R.id.button15);
+        button15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.e("Main Activity", "Scale button clicked");
+                try {
+                    mpE.seekTo(0);
+                    mpE.start();
+                    Pause(500);
+                    Fs.start();
+                    Pause(500);
+                    Gs.start();
+                    Pause(500);
+                    A.start();
+                    Pause(500);
+                    B.start();
+                    Pause(500);
+                    Cs.start();
+                    Pause(500);
+                    Ds.start();
+                    Pause(500);
+                    Highe.start();
+                    Pause(500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 
-
+    private void Pause(int delay) throws InterruptedException {
+        try {
+            Thread.sleep(delay);
+        } catch (InterruptedException e) {
+            Log.e("Main Activity", "Error pausing");
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
